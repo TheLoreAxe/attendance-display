@@ -47,7 +47,7 @@ const PAGE_CONFIGS = {
   },
   har: {
     range: "TradeshowHARAttendance!A:D",
-    header: "AILGATING SCOREBOARD",
+    header: "TAILGATING SCOREBOARD",
     type: "chart",
     secondaryColor: HAR_CORAL,
   },
