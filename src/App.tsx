@@ -41,13 +41,13 @@ const API_KEY = "AIzaSyDdUVN3znMFnQ9LPvRfq42pwny7RZ9xBDI";
 const PAGE_CONFIGS = {
   core: {
     range: "TradeshowCOREAttendance!A:D",
-    header: "Tailgating Scoreboard",
+    header: "TAILGATING SCOREBOARD",
     type: "chart",
     secondaryColor: CORE_YELLOW,
   },
   har: {
     range: "TradeshowHARAttendance!A:D",
-    header: "Tailgating Scoreboard",
+    header: "AILGATING SCOREBOARD",
     type: "chart",
     secondaryColor: HAR_CORAL,
   },
@@ -253,7 +253,7 @@ export default function AttendanceDisplay() {
     return (
       <div className={`awards-container ${gridClass}`}>
         {awardData.map((award, index) => (
-          <div key={index} className="award-item">
+          <div key={index} className={`award-item${index === 5 ? ' sixth' : ''}`}>
             <div className="award-top"><span className="award-name">{award.award}</span></div>
             <div className="award-divider" />
             <div className="award-bottom">

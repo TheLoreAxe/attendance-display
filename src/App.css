@@ -28,7 +28,7 @@
   opacity: 1;
 }
 .award-name {
-  font-size: clamp(1.0rem, 1vw, 2.0rem);
+  font-size: clamp(1.3rem, 1.3vw, 2.3rem);
   font-weight: 800;
   color: var(--brand-blue);
   margin-bottom: 0.1em;
@@ -295,14 +295,11 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.award-office {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--brand-blue);
-  opacity: 0.8;
-  line-height: 1.2;
-  text-transform: capitalize;
-}
+.award-item.sixth .award-recipient {
+   font-size: 4em; 
+  }
+
+
 
 /* Chart container with navigation arrows */
 .chart-container {
