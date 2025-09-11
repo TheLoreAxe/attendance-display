@@ -53,7 +53,7 @@ const PAGE_CONFIGS = {
   },
   awards: {
     range: "Awards!A:C",
-    header: "Tailgating Stats",
+    header: "TAILGATING STATS",
     type: "list",
     secondaryColor: "none",
   },
@@ -254,9 +254,11 @@ export default function AttendanceDisplay() {
       <div className={`awards-container ${gridClass}`}>
         {awardData.map((award, index) => (
           <div key={index} className="award-item">
-            <div className="award-name">{award.award}</div>
-            <div className="award-recipient">{award.recipient}</div>
-            {award.office && <div className="award-office">{award.office}</div>}
+            <div className="award-top"><span className="award-name">{award.award}</span></div>
+            <div className="award-divider" />
+            <div className="award-bottom">
+              <span className="award-recipient">{award.recipient}</span>
+            </div>
           </div>
         ))}
       </div>
