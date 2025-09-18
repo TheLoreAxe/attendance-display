@@ -86,13 +86,14 @@ body {
 
 /* Header: no white card, just white title */
 .page-header {
-  width: 80%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1500px;
   background: transparent;
   color: #ffffff;
   padding: 0.25rem 0;
   display: grid;
   place-items: center;
+  text-align: center;
 }
 .page-header h1 {
   margin: 0;
@@ -295,7 +296,8 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.award-item.sixth .award-recipient {
+
+.award-item.largeNumber .award-recipient {
    font-size: 4em; 
   }
 

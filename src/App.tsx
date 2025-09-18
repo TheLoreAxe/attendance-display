@@ -41,19 +41,22 @@ const API_KEY = "AIzaSyDdUVN3znMFnQ9LPvRfq42pwny7RZ9xBDI";
 const PAGE_CONFIGS = {
   core: {
     range: "TradeshowCOREAttendance!A:D",
-    header: "TAILGATING SCOREBOARD",
+    header1: "Carolina One MARTECH Tradeshow",
+    header2: "TAILGATING SCOREBOARD",
     type: "chart",
     secondaryColor: CORE_YELLOW,
   },
   har: {
     range: "TradeshowHARAttendance!A:D",
-    header: "TAILGATING SCOREBOARD",
+    header1: "Home Advantage MARTECH Tradeshow",
+    header2: "TAILGATING SCOREBOARD",
     type: "chart",
     secondaryColor: HAR_CORAL,
   },
   awards: {
     range: "Awards!A:C",
-    header: "TAILGATING STATS",
+    header1: "MARTECH TRADESHOW",
+    header2: "TAILGATING STATS",
     type: "list",
     secondaryColor: "none",
   },
@@ -253,7 +256,7 @@ export default function AttendanceDisplay() {
     return (
       <div className={`awards-container ${gridClass}`}>
         {awardData.map((award, index) => (
-          <div key={index} className={`award-item${index === 5 ? ' sixth' : ''}`}>
+          <div key={index} className={`award-item${index === 4 || index === 5 ? ' largeNumber' : ''}`}>
             <div className="award-top"><span className="award-name">{award.award}</span></div>
             <div className="award-divider" />
             <div className="award-bottom">
@@ -344,7 +347,8 @@ export default function AttendanceDisplay() {
       </div>
 
       <header className="page-header">
-        <h1>{currentConfig.header}</h1>
+        <h1>{currentConfig.header1}</h1>
+        <h1>{currentConfig.header2}</h1>
       </header>
 
       <div className="chart-container">
