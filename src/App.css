@@ -68,6 +68,10 @@ body {
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--text-color);
   background: var(--brand-blue);
+  background-image: url('src\\assets\\background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -217,7 +221,7 @@ body {
 .awards-container {
 	width: 95%;
 	max-width: 1400px;
-	height: 50vh;
+	height: 55vh;
 	background: transparent;
 	border-radius: 0;
 	box-shadow: none;
@@ -226,13 +230,14 @@ body {
 	grid-template-columns: repeat(3, 1fr);
 	grid-auto-rows: auto;
 	align-items: stretch;
-	gap: 3rem;
+	gap: 2rem;
 	overflow-y: auto;
 	position: relative;
 }
 
 .awards-container::before {
   content: none;
+  
 }
 
 /* Grid layouts for different award counts (kept for flexibility) */
@@ -265,6 +270,7 @@ body {
   overflow: hidden;
   min-height: 80px;
   justify-content: center;
+  margin: 10px 10px 10px 10px;
 }
 
 /* Soft sheen overlay on hover */
@@ -310,6 +316,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 12%;
 }
 
 /* Navigation arrows */

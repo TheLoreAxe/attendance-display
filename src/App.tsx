@@ -41,22 +41,22 @@ const API_KEY = "AIzaSyDdUVN3znMFnQ9LPvRfq42pwny7RZ9xBDI";
 const PAGE_CONFIGS = {
   core: {
     range: "TradeshowCOREAttendance!A:D",
-    header1: "Carolina One MARTECH Tradeshow",
-    header2: "TAILGATING SCOREBOARD",
+    header1: "", // "Carolina One MARTECH Tradeshow",
+    header2: "", //"TAILGATING SCOREBOARD",
     type: "chart",
     secondaryColor: CORE_YELLOW,
   },
   har: {
     range: "TradeshowHARAttendance!A:D",
-    header1: "Home Advantage MARTECH Tradeshow",
-    header2: "TAILGATING SCOREBOARD",
+    header1: "", //"Home Advantage MARTECH Tradeshow",
+    header2: "", //"TAILGATING SCOREBOARD",
     type: "chart",
     secondaryColor: HAR_CORAL,
   },
   awards: {
     range: "Awards!A:C",
-    header1: "MARTECH TRADESHOW",
-    header2: "TAILGATING STATS",
+    header1: "", //"MARTECH TRADESHOW",
+    header2: "", //"TAILGATING STATS",
     type: "list",
     secondaryColor: "none",
   },
