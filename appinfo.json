@@ -1,0 +1,11 @@
+{
+  "id": "com.example.reactapp",
+  "version": "1.0.0",
+  "vendor": "You",
+  "type": "web",
+  "main": "dist/index.html",
+  "title": "Tradeshow Scoreboard",
+  "icon": "icon.png",
+  "requiredPermissions": ["time", "display"],
+  "background": true
+}
