@@ -1,69 +1,54 @@
-# React + TypeScript + Vite
+# Tradeshow Attendance Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A live, visually engaging dashboard built with **React + Vite + TypeScript** for our company tradeshow. This app pulls real-time attendance data from a Google Sheet (populated by a separate check-in system) and displays it across three full-screen slides:
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Pages Overview
 
-## Expanding the ESLint configuration
+### 1. **CORE Offices Attendance**
+- Bar graph showing **live headcount per CORE office**
+- Updates automatically as new scans come in
+- Clean, bold visuals optimized for large tradeshow displays
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2. **HAR Offices Attendance**
+- Same style as CORE — dedicated bar graph for **HAR office attendance**
+- Side-by-side comparison potential when toggled
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 3. **Awards & Stats Slide**
+- **Best Attendance**: Office with the highest turnout (percentage or raw count)
+- **Last Arrival**: Most recent check-in with name and timestamp
+- **Total Attendees**: Running count across all offices
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## How It Works
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Check-in System** → Scans badge → Writes to **Google Sheet**
+2. This app **reads the sheet every 10 seconds** (configurable)
+3. Data is parsed and grouped by office (CORE vs HAR)
+4. Charts auto-update — no refresh needed
+<img width="2047" height="1062" alt="scoreboard1" src="https://github.com/user-attachments/assets/d2d9e975-d953-4f17-9bd0-ea6ebfa9b526" />
+<img width="2047" height="1063" alt="scoreboard2" src="https://github.com/user-attachments/assets/bec8b91b-96d0-4f00-9086-8439bb16615e" />
+
+---
+
+## Tech Stack
+
+- **React** + **Vite** – Fast dev server & builds
+- **TypeScript** – Type safety for sheet data & config
+- **Recharts** – Beautiful, responsive charts
+- **Google Sheets API** – Direct read access (via service account)
+- **Tailwind CSS** – Rapid, consistent styling for large screens
+
+---
+
+## Setup (Quick Start)
+
+### 1. Clone & Install
+```bash
+git clone <your-repo-url>
+cd tradeshow-dashboard
+npm install
